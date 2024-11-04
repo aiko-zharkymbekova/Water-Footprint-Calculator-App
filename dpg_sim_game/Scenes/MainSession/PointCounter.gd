@@ -1,5 +1,5 @@
 class_name PointCounter
-extends Label
+extends Control
 
 var present = true
 
