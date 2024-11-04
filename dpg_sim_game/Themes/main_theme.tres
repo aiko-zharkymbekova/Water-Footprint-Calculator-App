@@ -1,6 +1,9 @@
-[gd_resource type="Theme" load_steps=2 format=2]
+[gd_resource type="Theme" load_steps=3 format=2]
 
-[ext_resource path="res://Fonts/Font_Regular32.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Font_Regular18.tres" type="DynamicFont" id=1]
+[ext_resource path="res://Fonts/Font_Bold16.tres" type="DynamicFont" id=2]
 
 [resource]
 default_font = ExtResource( 1 )
+LabelBold/base_type = "Label"
+LabelBold/fonts/font = ExtResource( 2 )
