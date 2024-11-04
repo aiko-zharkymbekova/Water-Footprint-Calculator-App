@@ -20,7 +20,6 @@ margin_left = 106.0
 margin_top = 119.0
 margin_right = 208.0
 margin_bottom = 138.0
-text = "Fit points"
 
 [node name="DevCounter" parent="." instance=ExtResource( 2 )]
 visible = false
@@ -28,7 +27,6 @@ margin_left = 264.0
 margin_top = 119.0
 margin_right = 366.0
 margin_bottom = 138.0
-text = "Dev points"
 
 [node name="MarketCounter" parent="." instance=ExtResource( 2 )]
 visible = false

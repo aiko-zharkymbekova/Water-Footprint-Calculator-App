@@ -16,9 +16,9 @@ func Start():
 	$Project_Button.Start()
 	$Project_Button.StartShaking()
 	
-	$FitCounter.text = trans.local("FIT_PTS")
-	$DevCounter.text = trans.local("DEV_PTS")
-	$MarketCounter.text = trans.local("MARKET_PTS")
+	$FitCounter/Label.text = trans.local("FIT_PTS")
+	$DevCounter/Label.text = trans.local("DEV_PTS")
+	$MarketCounter/Label.text = trans.local("MARKET_PTS")
 	
 	PGR = float(global.mainConfig["PGR"])
 	NPR = float(global.mainConfig["NPR"])
