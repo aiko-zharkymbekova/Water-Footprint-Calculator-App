@@ -5,13 +5,14 @@ signal buttonPressed
 export var buttonText = "Start"
 export var sPressed = preload("res://Sprites/UI/MainMenuLongPresses.png")
 export var sReleased = preload("res://Sprites/UI/MainMenuLong.png")
-export var usedFont = preload("res://Fonts/Font_Regular32.tres")
+# export var usedFont = preload("res://Fonts/Font_Regular32.tres")
 export var pressedOffset = 6
 
 func Start():
 	if len(buttonText) > 0:
 		$Label.text = trans.local(buttonText)
-		$Label.add_font_override("font", usedFont)
+		# Conflicts with auto size font
+		# $Label.add_font_override("font", usedFont)
 	icon = sReleased
 
 func SetText(_text):
