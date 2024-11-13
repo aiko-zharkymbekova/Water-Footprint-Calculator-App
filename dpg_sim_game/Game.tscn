@@ -31,6 +31,11 @@ script = ExtResource( 1 )
 [node name="WebInterface" type="Node2D" parent="."]
 script = ExtResource( 2 )
 
+[node name="HeaderLayer" type="CanvasLayer" parent="."]
+
+[node name="Header" parent="HeaderLayer" instance=ExtResource( 12 )]
+visible = false
+
 [node name="MainMenu" parent="." instance=ExtResource( 7 )]
 visible = false
 
@@ -47,9 +52,6 @@ visible = false
 visible = false
 
 [node name="ActionScreen" parent="." instance=ExtResource( 13 )]
-visible = false
-
-[node name="Header" parent="." instance=ExtResource( 12 )]
 visible = false
 
 [node name="MM_Button" parent="." instance=ExtResource( 3 )]

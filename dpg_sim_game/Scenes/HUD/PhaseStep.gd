@@ -1,4 +1,4 @@
-extends Sprite
+extends Node
 
 func ActiveStep():
 	$Color.color = Color.yellow

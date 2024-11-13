@@ -1,5 +1,11 @@
 extends CanvasLayer
 
+# Dependencies
+onready var title = $CenterContainer/Control/Title
+onready var body = $CenterContainer/Control/Body
+onready var a_button = $CenterContainer/Control/A_Button
+onready var b_button = $CenterContainer/Control/B_Button
+
 var curEvent
 
 func CheckEvents(day):
@@ -20,15 +26,15 @@ func ShowEvent(event):
 	global.game.PauseTimer(true)
 	curEvent = event
 	visible = true
-	$Title.text = curEvent["Title"]
-	$Body.text = curEvent["Description"]
-	SetupOption($A_Button, "First")
+	title.text = curEvent["Title"]
+	body.text = curEvent["Description"]
+	SetupOption(a_button, "First")
 	
 	if len(curEvent["Second option"]) > 0:
-		SetupOption($B_Button, "Second")
-		$B_Button.visible = true
+		SetupOption(b_button, "Second")
+		b_button.visible = true
 	else:
-		$B_Button.visible = false
+		b_button.visible = false
 
 func SetupOption(button, number):
 	button.Start()

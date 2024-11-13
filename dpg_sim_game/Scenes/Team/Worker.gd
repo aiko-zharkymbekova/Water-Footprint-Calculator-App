@@ -1,5 +1,8 @@
 extends Label
 
+signal worker_hire_pressed(worker_name)
+signal worker_fire_pressed(worker_name)
+
 func Start():
 	text = name
 	match name:
@@ -17,19 +20,15 @@ func Start():
 			$BgDefault/Portrait.texture = load("res://Sprites/Portraits/portrait06Transaprent.png")
 		"Support":
 			$BgDefault/Portrait.texture = load("res://Sprites/Portraits/portrait07Transaprent.png")
-	
-	UpdateQuantity()
 
 func _on_Plus_Button_buttonPressed():
-	get_parent().HireWorker(name)
-	UpdateQuantity()
+	emit_signal("worker_hire_pressed", name)
 
 func _on_Minus_Button_buttonPressed():
-	get_parent().FireWorker(name)
-	UpdateQuantity()
+	emit_signal("worker_fire_pressed", name)
 
-func UpdateQuantity():
-	$Quantity.text = str(get_parent().team[name])
+func UpdateQuantity(quantity):
+	$Quantity.text = str(quantity)
 
 
 func _on_DetailsButton_pressed():

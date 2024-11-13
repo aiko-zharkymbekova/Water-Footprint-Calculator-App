@@ -1,16 +1,24 @@
 extends Node
 
+# Dependencies
+onready var action_options = [
+	$CenterContainer/Control/ActionOption1,
+	$CenterContainer/Control/ActionOption2,
+	$CenterContainer/Control/ActionOption3,
+	$CenterContainer/Control/ActionOption4,
+]
+onready var back_button = $CenterContainer/Control/Back_Button
+
 func Start():
-	$ActionOption1.present = int(global.actions[0]["StartingPhase"]) <= global.curPhaseIndex
-	$ActionOption2.present = int(global.actions[1]["StartingPhase"]) <= global.curPhaseIndex
-	$ActionOption3.present = int(global.actions[2]["StartingPhase"]) <= global.curPhaseIndex
-	$ActionOption4.present = int(global.actions[3]["StartingPhase"]) <= global.curPhaseIndex
-	
-	$ActionOption1.Start()
-	$ActionOption2.Start()
-	$ActionOption3.Start()
-	$ActionOption4.Start()
-	$Back_Button.Start()
+	for i in range(len(action_options)):
+		action_options[i].present = int(global.actions[i]["StartingPhase"]) <= global.curPhaseIndex
+
+	for i in range(len(action_options)):
+		action_options[i].Start()
+		if (!action_options[i].is_connected("action_start_pressed", self, "StartAction")):
+			action_options[i].connect("action_start_pressed", self, "StartAction")
+
+	back_button.Start()
 
 func StartAction(index):
 	if index == 3:
