@@ -47,14 +47,13 @@ margin_bottom = 56.0
 [node name="PhaseTitle" type="Label" parent="Phase/Margin/Control"]
 anchor_right = 1.0
 anchor_bottom = 0.5
-theme_type_variation = "LabelBold"
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "DPG status application"
 align = 1
 valign = 1
 autowrap = true
 script = ExtResource( 6 )
-max_font_size = 16
+max_font_size = 20
 padding = 20
 
 [node name="MarginContainer" type="MarginContainer" parent="Phase/Margin/Control"]

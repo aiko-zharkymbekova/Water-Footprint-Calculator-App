@@ -1,11 +1,10 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Fonts/Font_Regular16.tres" type="DynamicFont" id=1]
 [ext_resource path="res://Sprites/UI/PointsMeter.png" type="Texture" id=2]
 [ext_resource path="res://Scenes/MainSession/PointCounter.gd" type="Script" id=3]
 [ext_resource path="res://Themes/main_theme.tres" type="Theme" id=4]
 [ext_resource path="res://Tools/auto_size_label.gd" type="Script" id=5]
-[ext_resource path="res://Fonts/Font_Bold13.tres" type="DynamicFont" id=6]
 
 [node name="PointCounter" type="CenterContainer"]
 margin_right = 102.0
@@ -27,13 +26,12 @@ grow_horizontal = 2
 grow_vertical = 2
 theme = ExtResource( 4 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
-custom_fonts/font = ExtResource( 6 )
 text = "Market points"
 align = 1
 valign = 1
 clip_text = true
 script = ExtResource( 5 )
-max_font_size = 12
+max_font_size = 16
 
 [node name="PointsMeter" type="TextureRect" parent="Control"]
 anchor_right = 1.0
